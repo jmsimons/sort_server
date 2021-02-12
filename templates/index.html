@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+
+        <form method = "POST" action = "" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <fieldset class = "form-group">
+                <legend class = "border-bottom mb-4">Upload and Sort</legend>
+                <div class = "form-group">
+                    {{ form.upload_file }}
+                    {{ form.submit }}
+                </div>
+            </fieldset>
+        </form>
+        
+        <div>
+            {% if file %}
+                <h4>Sorted Lines Here</h4><br>
+                {% for line in file %}
+                    {{ line }}<br>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,84 @@
+
+
+
+
+
+
+
+
+
+
+    * Incompatible with:  gi_mask
+    * Incompatible with:  mask_id
+    * Incompatible with:  taxid
+    * Incompatible with:  taxid_map
+    * Requires:  mask_data
+    * Requires:  mask_data, gi_mask
+    * Requires:  mask_id
+    * Requires:  parse_seqids
+    * Requires:  parse_seqids
+    -dbtype molecule_type [-title database_title] [-parse_seqids]
+    [-gi_mask_name gi_based_mask_names] [-out database_name]
+    [-hash_index] [-mask_data mask_data_files] [-mask_id mask_algo_ids]
+    [-mask_desc mask_algo_descriptions] [-gi_mask]
+    [-max_file_sz number_of_bytes] [-logfile File_Name] [-taxid TaxID]
+    [-taxid_map TaxIDMapFile] [-version]
+   Application to create BLAST databases, version 2.7.1+
+   Comma-separated list of free form strings to describe the masking algorithm
+   Comma-separated list of input files containing masking data as produced by
+   Comma-separated list of masking data output files.
+   Comma-separated list of strings to uniquely identify the masking algorithm
+   Create GI indexed masking data.
+   Create index of sequence hash values.
+   Default = `-'
+   Default = `1GB'
+   Default = `fasta'
+   Default = input file name provided to -in argument
+   Default = input file name provided to -in argumentRequired if multiple
+   details
+   File to which the program log should be redirected
+   file(s)/database(s) are provided as input
+   Format:<SequenceId> <TaxonomyId><newline>
+   Input file/database name
+   Maximum file size for BLAST database files
+   Molecule type of target db
+   Name of BLAST database to be created
+   NCBI masking applications (e.g. dustmasker, segmasker, windowmasker)
+   Option to parse seqid for FASTA input if set, for all other input types
+   Print USAGE and DESCRIPTION;  ignore all other parameters
+   Print USAGE, DESCRIPTION and ARGUMENTS; ignore all other parameters
+   Print version number;  ignore other arguments
+   seqids are parsed automatically
+   Taxonomy ID to assign to all sequences
+   Text file mapping sequence IDs to taxonomy IDs.
+   Title for BLAST database
+   Type of the data specified in input_file
+  makeblastdb [-h] [-help] [-in input_file] [-input_type type]
+ *** Configuration options
+ *** Input options
+ *** Output options
+ *** Sequence masking options
+ *** Taxonomy options
+ -dbtype <String, `nucl', `prot'>
+ -gi_mask
+ -gi_mask_name <String>
+ -h
+ -hash_index
+ -help
+ -in <File_In>
+ -input_type <String, `asn1_bin', `asn1_txt', `blastdb', `fasta'>
+ -logfile <File_Out>
+ -mask_data <String>
+ -mask_desc <String>
+ -mask_id <String>
+ -max_file_sz <String>
+ -out <String>
+ -parse_seqids
+ -taxid <Integer, >=0>
+ -taxid_map <File_In>
+ -title <String>
+ -version
+DESCRIPTION
+OPTIONAL ARGUMENTS
+REQUIRED ARGUMENTS
+USAGE
